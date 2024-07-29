@@ -5,7 +5,7 @@ const cors = require('cors');
 const socketIo = require('socket.io');
 const authRoutes = require('./routes/auth');
 const flightRoutes = require('./routes/flight');
-const helmet = require('helmet');
+
 const path = require('path');
 
 const app = express();
@@ -19,7 +19,7 @@ const io = socketIo(server, {
 
 // Security middleware
 app.use(cors());
-app.use(helmet());
+
 
 // Parse JSON payloads
 app.use(express.json());
