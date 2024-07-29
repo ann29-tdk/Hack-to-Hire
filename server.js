@@ -24,8 +24,7 @@ app.use(cors());
 // Parse JSON payloads
 app.use(express.json());
 
-// Static files
-app.use(express.static(path.join(__dirname, 'build')));
+
 
 // Routes
 app.use('/auth', authRoutes);
