@@ -85,7 +85,7 @@ router.post('/update', async (req, res) => {
       // Construct notification message
       const latestArrivalTime = flight.arrivalTimes[flight.arrivalTimes.length - 1];
       const latestDepartureTime = flight.departureTimes[flight.departureTimes.length - 1];
-      const notificationMessage = `The Flight ${flightNumber} scheduled for ${arrivalDate} will depart at ${latestDepartureTime} and arrive at ${latestArrivalTime} at ${destination}. Thank you and have a safe flight.`;
+      const notificationMessage = `IS CANCELLED:  ${isCancelled} and The Flight ${flightNumber} scheduled for ${arrivalDate} will depart at ${latestDepartureTime} and arrive at ${latestArrivalTime} at ${destination} from gate number ${gateNumber}. Thank you and have a safe flight.`;
 
       // Push notification message to user notifications array
       user.notifications.push({
