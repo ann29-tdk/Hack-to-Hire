@@ -45,7 +45,7 @@ router.post('/update', async (req, res) => {
       flight.arrivalDate = arrivalDate;
       flight.isCancelled = isCancelled;
       flight.destination = destination;
-      fligth.gateNumber = gateNumber;
+      flight.gateNumber = gateNumber;
 
       if (arrivalTime) {
         flight.arrivalTimes.push(arrivalTime);
