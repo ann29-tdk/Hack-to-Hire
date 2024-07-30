@@ -9,7 +9,8 @@ const flightSchema = new Schema({
   isCancelled: { type: Boolean, default: false },
   destination: { type: String, required: true },
   arrivalDelays: [Number],
-  departureDelays: [Number]
+  departureDelays: [Number],
+  gateNumber: { type: String, required: true } // Added gateNumber field
 });
 
 module.exports = mongoose.model('Flight', flightSchema);
