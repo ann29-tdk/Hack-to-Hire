@@ -38,13 +38,14 @@ router.get('/:flightNumber', async (req, res) => {
 
 // Update flight details and notify users
 router.post('/update', async (req, res) => {
-  const { flightNumber, arrivalDate, arrivalTime, departureTime, isCancelled, destination } = req.body;
+  const { flightNumber, arrivalDate, arrivalTime, departureTime, isCancelled, destination, gateNumber } = req.body;
   try {
     let flight = await Flight.findOne({ flightNumber });
     if (flight) {
       flight.arrivalDate = arrivalDate;
       flight.isCancelled = isCancelled;
       flight.destination = destination;
+      fligth.gateNumber = gateNumber;
 
       if (arrivalTime) {
         flight.arrivalTimes.push(arrivalTime);
